@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pais de Origem</title>
+</head>
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+    <input type="text" name="nacionalidade" id="nacionalidade">
+    <input type="button" value="Consultar" onclick="Consultar()">
+    <div id="result">
+
+    </div>
+
+    <script>
+        function Consultar(){
+            var n = window.document.querySelector('input#nacionalidade')
+            var res = window.document.querySelector('div#result')
+            var nac = (n.value)
+            res.innerHTML = 'Bem vindo ao sistema de Nacionalidades' 
+            res.innerHTML += `<p>Seu pais é <strong>${nac}</strong></p>`
+            if(nac == 'Brasil'){
+                res.innerHTML += '<p>Você é <strong>Brasileiro</strogn></p>'
+            } else{
+                res.innerHTML += '<p>Você <strong>não</strong> é Brasileiro</p>'
+            }
+        }
+    
+    </script>
+</body>
+</html>
